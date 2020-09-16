@@ -241,7 +241,11 @@ view: requests__http_request {
   measure:sum_resp_size{
     type:sum
     sql:${TABLE}.responseSize;;
+  }
 
+  measure:sum_cache_fill_bytes{
+    type:sum
+    sql:${TABLE}.cacheFillBytes;;
   }
 }
 
