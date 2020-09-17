@@ -247,6 +247,24 @@ view: requests__http_request {
     type:sum
     sql:${TABLE}.cacheFillBytes;;
   }
+
+  measure:50th_percentile_latency{
+    type:percentile
+    percentile: 50
+    sql:${TABLE}.latency;;
+  }
+
+  measure:90th_percentile_latency{
+    type:percentile
+    percentile: 90
+    sql:${TABLE}.latency;;
+  }
+
+  measure:99th_percentile_latency{
+    type:percentile
+    percentile: 99
+    sql:${TABLE}.latency;;
+  }
 }
 
 view: requests__source_location {
