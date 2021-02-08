@@ -1,4 +1,4 @@
-connection: "bq_cdn_logs_of_hy"
+connection: "huya-cdn-requests"
 
 # include all the views
 include: "/views/**/*.view"
